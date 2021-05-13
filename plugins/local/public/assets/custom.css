@@ -1,0 +1,132 @@
+/* Use official UNR colors in the header, throughout all of PUI*/
+
+body {
+	font-size:16px;
+}
+
+#header .logo {
+    float: right;
+    height: 75px;
+    text-align: right;
+    padding: 10px;
+}
+
+#header {
+	background-color: #003366;
+}
+
+#header .h1, #header .h1 a {
+	color: white;
+	font-weight:normal;
+}
+
+a { color: #a94442 }
+
+a:hover {
+	color: #d20000;
+}
+
+a:focus {
+  color: #d20000;
+}
+
+h1, .h1 { color: #003366 }
+h2, .h2 { color: #003366; }
+h3 { color: #003366; }
+
+body { color: #000000; }
+
+#header > .row { border-bottom: 0.25rem solid #003366; }
+
+.btn-primary {
+  background-color: #003366;
+  border-color: #003366;
+}
+
+.btn-primary:focus,.btn-primary.focus { background-color: #003366; }
+.btn-primary:hover { background-color: #000000; }
+
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  background-color: #003366;
+  border-color: #003366;
+}
+.pagination > li > a, .pagination > li > span { color: #003366; }
+
+.navbar-default .navbar-nav > li > a { color: #003366; }
+
+.record-type-badge.accession { color: #000000; }
+.record-type-badge.agent { color: #000000; } 
+.record-type-badge.archival_object { color: #000000; } 
+.record-type-badge.digital_object { color: #000000; } 
+.record-type-badge.repository { color: #000000; }
+.record-type-badge.resource { color: #000000; }
+.record-type-badge.subject { color: #000000; }
+
+.record-type-badge.digital_object { color: #000000; }
+.record-type-badge.digital_object { border-color: #000000; }
+.record-type-badge.archival_object { border-color: #000000; }
+.record-type-badge.archival_object { color: #000000; }
+.top_container { color: #000000; }
+
+
+/* Style custom UNR footer content*/
+.panel-footer {
+    margin-top: 4em;
+}
+.panel-footer ul.footer-list {
+    list-style-type: none;
+    float: left;
+    text-align: left;
+}
+
+/* Eliminate the curves on the tabbing pills*/
+.tabbing.nav-pills > li:first-child a {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.tabbing.nav-pills > li > a {
+	margin-bottom: 0;
+	margin-right: 0;
+	border-radius: 0;
+	background-color: #000;
+}
+
+.tabbing.nav-pills > li:last-child a {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.tabbing.nav-pills > li > a {
+	margin-left: 0px;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,40 @@
+
+<div class="row">
+<div class="col-sm-12">
+  <h1><%= t('brand.welcome_head') %></h1>
+    <div> <%= t('brand.welcome_message').html_safe %> </div>
+</div>
+</div>
+
+  <%= render partial: 'shared/search', locals: {
+    :search_url => "/search",
+    :title => t('archive._plural'),
+    :limit_options => [
+          ["#{t('actions.search')} #{t('search-limits.all')}",''],
+          [t('search-limit', :limit => t('search-limits.resources')),'resource'],
+          [t('search-limit', :limit => t('search-limits.digital')),'digital_object']
+        ],
+    :field_options => [
+          ["#{t('search_results.filter.fullrecord')}",''],
+          ["#{t('search_results.filter.title')}",'title'],
+          ["#{t('search_results.filter.creators')}",'creators_text'],
+          ["#{t('search_results.filter.subjects')}",'subjects_text'],
+          ["#{t('search_results.filter.notes')}", 'notes'],
+          ["#{t('search_results.filter.identifier')}", 'four_part_id']
+         ]
+  } %>
+
+<div class="row welcome-text">
+  <div class="col-sm-6">
+    <h2>About this Site</h2>
+    <p>Use these guides to explore our manuscript, photograph, and maps collections. Materials in these guides come from <a href="https://library.unr.edu/specoll" title="visit the Special Collections and University Archives Department webpage">the Special Collections and University Archives Department</a>, <a href="https://library.unr.edu/basque" title="visit the Jon Bilbao Basque Library webpage">the Jon Bilbao Basque Library</a>, and <a href="https://library.unr.edu/delamare" title="the DeLaMare Science & Engineering Library webpage">the DeLaMare Science & Engineering Library</a>. When requesting materials, please take note of the collection and home repository.</p> 
+    <p>The contact information for each repository is listed in the collection guides.</p>
+  </div>
+  <div class="col-sm-6">
+    <h2>Searching the Guides</h2>
+    <p>The guides contain a wealth of information about the collections preserved by the University Libraries. Users can search the guides by keyword and filter their results by subjects, names, and dates.</p>
+    <p>The guides also allow users to browse topics and names.</p>
+    <p><a class="btn btn-primary btn-sm" href="https://archive.library.unr.edu/public/subjects" title="Browse by Subject">Browse by Subject</a>
+    <p><a class="btn btn-primary btn-sm" href="https://archive.library.unr.edu/public/agents" title="Browse by Name">Browse by Name</a>
+  </div>
+</div>

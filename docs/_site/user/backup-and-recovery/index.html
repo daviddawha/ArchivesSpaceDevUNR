@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Backup and recovery - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">Backup and recovery</h2>
+          
+          <h2 id="managing-your-own-backups">Managing your own backups</h2>
+
+<p>Performing regular backups of your MySQL database is critical.  ArchivesSpace stores
+all of your records data in the database, so as long as you have backups of your
+database then you can always recover from errors and failures.</p>
+
+<p>If you are running MySQL, the <code class="highlighter-rouge">mysqldump</code> utility can dump the database
+schema and data to a file.  It’s a good idea to run this with the
+<code class="highlighter-rouge">--single-transaction</code> option to avoid locking your database tables
+while your backups run. It is also essential to use the <code class="highlighter-rouge">--routines</code>
+flag, which will include functions and stored procedures in the
+backup. The <code class="highlighter-rouge">mysqldump</code> utility is widely used, and there are many tutorials
+available. As an example, something like this in your <code class="highlighter-rouge">crontab</code> would backup your
+database twice daily:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Dump archivesspace database 6am and 6pm
+ 30 06,18 * * * mysqldump -u as -pas123 archivesspace | gzip &gt; ~/backups/db.$(date +%F.%H%M%S).sql.gz
+</code></pre></div></div>
+
+<p>You should store backups in a safe location.</p>
+
+<p>If you are running with the demo database (NEVER run the demo database in production),
+you can create periodic database snapshots using the following configuration settings:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # In this example, we create a snapshot at 4am each day and keep
+ # 7 days' worth of backups
+ #
+ # Database snapshots are written to 'data/demo_db_backups' by
+ # default.
+ AppConfig[:demo_db_backup_schedule] = "0 4 \* \* \*"
+ AppConfig[:demo\_db\_backup\_number\_to\_keep] = 7
+</code></pre></div></div>
+
+<p>Solr indexes can always be recreated from the contents of the
+database, but backing them up can reduce your recovery time if
+disaster strikes on a large site.  You can create periodic Solr
+snapshots using the following configuration settings:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Create one snapshot at midnight and keep only one.
+ #
+ # Solr snapshots are written to 'data/solr_backups' by default.
+ AppConfig[:solr_backup_schedule] = "0 0 \* \* \*"
+ AppConfig[:solr\_backup\_number\_to\_keep] = 1
+</code></pre></div></div>
+
+<h2 id="creating-backups-using-the-provided-script">Creating backups using the provided script</h2>
+
+<p>ArchivesSpace provides some simple scripts for backing up a single
+instance to a <code class="highlighter-rouge">.zip</code> file.  You can run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> scripts/backup.sh --output /path/to/backup-yyyymmdd.zip
+</code></pre></div></div>
+
+<p>and the script will generate a file containing:</p>
+
+<ul>
+  <li>A snapshot of the demo database (if you’re using the demo database).
+NEVER use the demo database in production.</li>
+  <li>A snapshot of the Solr index and related indexer files</li>
+</ul>
+
+<p>If you are running against MySQL and have <code class="highlighter-rouge">mysqldump</code> installed, you
+can also provide the <code class="highlighter-rouge">--mysqldump</code> option.  This will read the
+database settings from your configuration file and add a dump of your
+MySQL database to the resulting <code class="highlighter-rouge">.zip</code> file.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> scripts/backup.sh --mysqldump --output ~/backups/backup-yyyymmdd.zip
+</code></pre></div></div>
+
+<h2 id="recovering-from-backup">Recovering from backup</h2>
+
+<p>When recovering an ArchivesSpace installation from backup, you will
+need to restore:</p>
+
+<ul>
+  <li>Your database (either the demo database or MySQL)</li>
+  <li>The search indexes and related indexer files (optional)</li>
+</ul>
+
+<p>Of the two, the database backup is the most crucial, your ArchivesSpace records
+are all stored in your MySQL database. The solr search indexes are worth restoring
+if you have backups, but they can be recreated from scratch if necessary.</p>
+
+<h3 id="recovering-your-database">Recovering your database</h3>
+
+<p>If you are using MySQL, recovering your database just requires loading
+your <code class="highlighter-rouge">mysqldump</code> backup into an empty database.  If you are using the
+<code class="highlighter-rouge">scripts/backup.sh</code> script (described above), this dump file is named
+<code class="highlighter-rouge">mysqldump.sql</code> in your backup <code class="highlighter-rouge">.zip</code> file.</p>
+
+<p>To load a MySQL dump file, follow the directions in <em>Set up your MySQL
+database</em> to create an empty database with the appropriate
+permissions.  Then, populate the database from your backup file using
+the MySQL client:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`mysql -uas -p archivesspace &lt; mysqldump.sql`, where
+  `as` is the user name
+  `archivesspace` is the database name
+  `mysqldump.sql` is the mysqldump filename
+</code></pre></div></div>
+
+<p>You will be prompted for the password of the user.</p>
+
+<p>If you are using the demo database, your backup <code class="highlighter-rouge">.zip</code> file will
+contain a directory called <code class="highlighter-rouge">demo_db_backups</code>.  Each subdirectory of
+<code class="highlighter-rouge">demo_db_backups</code> contains a backup of the demo database.  To
+restore from a backup, copy its <code class="highlighter-rouge">archivesspace_demo_db</code> directory back
+to your ArchivesSpace data directory.  For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cp -a /unpacked/zip/demo_db_backups/demo_db_backup_1373323208_25926/archivesspace_demo_db \
+       /path/to/archivesspace/data/
+</code></pre></div></div>
+
+<h3 id="recovering-the-search-indexes-and-related-indexer-files">Recovering the search indexes and related indexer files</h3>
+
+<p>This step is optional since indexes can be rebuilt from the contents
+of the database.  However, recovering your search indexes can reduce
+the time needed to get your system running again.</p>
+
+<p>The backup <code class="highlighter-rouge">.zip</code> file contains two directories used by the
+ArchivesSpace indexer:</p>
+
+<ul>
+  <li>solr.backup-[timestamp]/snapshot.[timestamp] – a snapshot of the
+index files.</li>
+  <li>solr.backup-[timestamp]/indexer_state – the files used by the
+indexer to remember what it last indexed.</li>
+</ul>
+
+<p>To restore these directories from backup:</p>
+
+<ul>
+  <li>Copy your index snapshot to <code class="highlighter-rouge">/path/to/archivesspace/data/solr_index/index</code></li>
+  <li>Copy your indexer_state backup to <code class="highlighter-rouge">/path/to/archivesspace/data/indexer_state</code></li>
+</ul>
+
+<p>For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mkdir -p /path/to/archivesspace/data/solr_index
+
+ cp -a /unpacked/zip/solr.backup-26475-1373323208/snapshot.20130709084008464 \
+       /path/to/archivesspace/data/solr_index/index
+
+ cp -a /unpacked/zip/solr.backup-26475-1373323208/indexer_state \
+       /path/to/archivesspace/data/
+</code></pre></div></div>
+
+<h3 id="checking-your-search-indexes">Checking your search indexes</h3>
+
+<p>ArchivesSpace ships with a script that can run Lucene’s CheckIndex
+tool for you, verifying that a given Solr index is free from
+corruption.  To test an index, run the following command from your
+<code class="highlighter-rouge">archivesspace</code> directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Or scripts/checkindex.bat for Windows
+ scripts/checkindex.sh data/solr_index/index
+</code></pre></div></div>
+
+<p>You can use the same script to check that your Solr backups are valid:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> scripts/checkindex.sh /unpacked/zip/solr.backup-26475-1373323208/snapshot.20130709084008464
+</code></pre></div></div>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

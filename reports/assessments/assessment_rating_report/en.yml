@@ -1,0 +1,6 @@
+en:
+  reports:
+    assessment_rating_report:
+      title: Assessment Rating Report
+      description: Shows information for assessments with a specified rating in a specified range.
+      identifier_prefix: Assessment

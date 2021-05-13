@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The ArchivesSpace public user interface - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">The ArchivesSpace public user interface</h2>
+          
+          <p>The ArchivesSpace Public User Interface (PUI) provides a public
+interface to your ArchivesSpace collections.  In a default
+ArchivesSpace installation it runs on port <code class="highlighter-rouge">:8081</code>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>The PUI is configured using the standard ArchivesSpace <code class="highlighter-rouge">config.rb</code>
+file, with the relevant configuration options are prefixed with
+<code class="highlighter-rouge">:pui_</code>.</p>
+
+<p>To see the full list of available options, see the file
+<a href="https://github.com/archivesspace/archivesspace/blob/master/common/config/config-defaults.rb"><code class="highlighter-rouge">https://github.com/archivesspace/archivesspace/blob/master/common/config/config-defaults.rb</code></a></p>
+
+<h3 id="preserving-patron-privacy">Preserving Patron Privacy</h3>
+
+<p>The <strong>:block_referrer</strong> key in the configuration file (default: <strong>true</strong>) determines whether the full referring URL is
+transmitted when the user clicks a link to a website outside the web domain of your instance of ArchivesSpace.  This
+protects your patrons from tracking by that site.</p>
+
+<h3 id="main-navigation-menu">Main Navigation Menu</h3>
+
+<p>You can choose not to display one or more of the links on the main
+(horizontal) navigation menu, either globally or by repository, if you
+have more than one repository.  You manage this through the
+<code class="highlighter-rouge">:pui_hide</code> options in the <code class="highlighter-rouge">config/config.rb</code> file.</p>
+
+<h3 id="repository-customization">Repository Customization</h3>
+
+<h4 id="display-of-badges-on-the-repository-page">Display of “badges” on the Repository page</h4>
+
+<p>You can configure which badges appear on the Repository page, both
+globally or by repository.  See the <code class="highlighter-rouge">:pui_hide</code> configuration options
+for these too.</p>
+
+<h3 id="activation-of-the-request-button-on-archival-object-pages">Activation of the “Request” button on archival object pages</h3>
+
+<p>You can configure, both globally or by repository, whether the
+“Request” button is active on archival object pages for objects that
+don’t have an associated Top Container.  See the
+<code class="highlighter-rouge">:pui_requests_permitted_for_containers_only</code> configuration option to
+modify this.</p>
+
+<h3 id="i18n">I18n</h3>
+
+<p>You can change the text and labels used by the PUI by editing the
+locale files under the <code class="highlighter-rouge">locales/public</code> directory of your
+ArchivesSpace distribution.</p>
+
+<h3 id="addition-of-a-lead-paragraph">Addition of a “lead paragraph”</h3>
+
+<p>You can also use the custom <code class="highlighter-rouge">.yml</code> files, described above, to add a
+custom “lead paragraph” (including html markup) for one or more of
+your repositories, keyed to the repository’s code.</p>
+
+<p>For example, if your repository, <code class="highlighter-rouge">My Wonderful Repository</code> has a code of <code class="highlighter-rouge">MWR</code>, this is what you might see in the
+custom <code class="highlighter-rouge">en.yml</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>en:
+  repos:
+    mwr:
+      lead_graph: This &lt;strong&gt;amazing&lt;/strong&gt; repository has so much to offer you!
+</code></pre></div></div>
+
+<h2 id="development">Development</h2>
+
+<p>To run a development server, the PUI follows the same pattern as the rest of ArchivesSpace.  From your ArchivesSpace checkout:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> # Prepare all dependencies
+ build/run bootstrap
+
+ # Run the backend development server (and Solr)
+ build/run backend:devserver
+
+ # Run the indexer
+ build/run indexer
+
+ # Finally, run the PUI itself
+ build/run public:devserver
+</code></pre></div></div>
+
+<h2 id="inheritance">Inheritance</h2>
+
+<h3 id="three-options-for-inheritance">Three options for inheritance:</h3>
+
+<ul>
+  <li>Directly inherit a value for a field – the record has no value for the field and you want the value in the field to display as if it were the record’s own [uncomment the inheritance section in the config, set desired field (property) to inherit_directly =&gt; true]</li>
+  <li>Indirectly inherit a value for a field – the record has no value for the field and you want to display the value from a higher level, but precede it with a note that indicates that it comes from that higher level, such as “From the collection” [uncomment the inheritance section in the config, set desired field (property) to inherit_directly =&gt; false]</li>
+  <li>Don’t display the field at all – the record has no value of its own for the field and you don’t want it to display at all [uncomment the inheritance section in the config, delete the lines for the desired field (property)]</li>
+</ul>
+
+<h3 id="archival-inheritance">Archival Inheritance</h3>
+
+<p>With the new version of the Public Interface, all elements of description can be inherited. This is especially important since the PUI displays each level of description as its own webpage.</p>
+
+<p>Each element of description can be inherited either directly or indirectly. When an element is inherited directly, it will appear as if that element was attached directly to that archival object in the staff interface. When an element is inherited indirectly, it will appear on the lower-level of description in the public interface, but the inherited element will be preceded with a note indicating the level of the ancestor from which the note is inherited (e.g. From the Collection, or From the Sub-Series). In both cases, the element will only be inherited if it is missing from the archival object. Additionally, the element of description will only be inherited from the closest ancestor. In other words, if a top-level collection record has an access restrictions note, and a child-level series record has an an access restrictions note, but the sub-series child of that series record lacks an access restrictions note, then the sub-series record will inherit only the access restrictions note from its parent series record.</p>
+
+<p>Additionally, the identifier element in ArchivesSpace, which is better known as the Reference Code in ISAD-G and DACS, can be inherited in a composite manner. When inherited in a composite manner, the inherited elements will be concatenated together. In other words, an identifier at the item level could look like this: MSS 1. Series A. Item 1. Though the archival object has an identifier of “Item 1”, a composite identifier is displayed since the series-level record to which the item belongs has an identifier of “Series A”, which in turn also belongs to a collection-level record that has an identifier of “MSS 1”.</p>
+
+<p>By default, the following elements are turned on for inheritance:</p>
+
+<ul>
+  <li>Title (direct inheritance)</li>
+  <li>Identifier (indirect inheritance, but by default the identifier inherits from ancestor archival objects only; it does NOT include the resource identifier.</li>
+</ul>
+
+<p>Also it is advised to inherit this element in a composite fashion once it is determined whether the level of description should or should not display as part of the identifier, which will depend upon local data-entry practices</p>
+
+<ul>
+  <li>Language code (direct inheritance, but it does NOT display anywhere in the interface currently; eventually, this could be used for faceting)</li>
+  <li>Dates (direct inheritance)</li>
+  <li>Extents (indirect inheritance)</li>
+  <li>Creator (indirect inheritance)</li>
+  <li>Access restrictions note (direct inheritance)</li>
+  <li>Scope and contents note (indirect inheritance)</li>
+  <li>Language of Materials note (indirect inheritance, but there seems to be a bug right now so that the Language notes always show up as being directly inherited. See AR-XXXX)</li>
+</ul>
+
+<p>See https://github.com/archivesspace/archivesspace/blob/master/common/config/config-defaults.rb#L296-L396 for more information and examples.</p>
+
+<p>Also, a video overview of this feature, which was recorded before development was finished, is available online:
+https://vimeo.com/195457286</p>
+
+<p>Composite Identifier Inheritance</p>
+
+<p>If you add the following three lines to your configuration file, re-start ArchivesSpace, and then let the indexer re-index your records, you can gain the benefit of composite identifiers:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AppConfig[:record_inheritance][:archival_object][:composite_identifiers] = {
+:include_level =&gt; true,
+:identifier_delimiter =&gt; '. '
+}
+</code></pre></div></div>
+
+<p>To add extra fields, such as subjects you can add the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inherited_fields_extras = [
+ {
+   code: 'subjects',
+   property: 'subjects',
+   inherit_if: proc { |json| json.select { |j| true } },
+   inherit_directly: false,
+ },
+]
+</code></pre></div></div>
+
+<p>When you set include_level to true, that means that the archival object level will be included in identifier so that you don’t have to repeat that data. For example, if the level of description is “Series” and the archival object identifier is “1”, and the parent resource identifier is “MSS 1”, then the composite identifier would display as “MSS 1. Series 1” at the series 1 level, and any descendant record. If you set include_level to false, then the display would be “MSS 1. 1”</p>
+
+<h3 id="license">License</h3>
+
+<p>ArchivesSpace is released under the <a href="http://opensource.org/licenses/ecl2.php">Educational Community License,
+version 2.0</a>. See the
+<a href="https://github.com/archivesspace/archivesspace/blob/master/COPYING">COPYING</a> file for more information.</p>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

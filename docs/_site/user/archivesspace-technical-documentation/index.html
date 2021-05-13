@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArchivesSpace technical documentation - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">ArchivesSpace technical documentation</h2>
+          
+          <ul>
+  <li><a href="./administration">Basic administration</a>
+    <ul>
+      <li><a href="./administration/getting_started.md">Getting started</a></li>
+      <li><a href="./administration/unix_daemon.md">Running ArchivesSpace as a Unix daemon</a></li>
+      <li><a href="./administration/windows.md">Running ArchivesSpace as a Windows service</a></li>
+      <li><a href="./administration/backup.md">Backup and recovery</a></li>
+      <li><a href="./administration/indexes.md">Re-creating indexes</a></li>
+      <li><a href="./administration/passwords.md">Resetting passwords</a></li>
+      <li><a href="./administration/upgrading.md">Upgrading</a></li>
+    </ul>
+  </li>
+  <li><a href="./architecture">Architecture and components</a>
+    <ul>
+      <li><a href="./architecture/jsonmodel.md">JSONModel – a validated ArchivesSpace record</a></li>
+      <li><a href="./architecture/backend.md">The ArchivesSpace backend</a></li>
+      <li><a href="./architecture/background_jobs.md">Background Jobs</a></li>
+      <li><a href="./architecture/search.md">Search indexing</a></li>
+      <li><a href="./architecture/public.md">The ArchivesSpace public user interface</a></li>
+      <li><a href="./architecture/oai-pmh.md">OAI-PMH interface</a></li>
+    </ul>
+  </li>
+  <li><a href="./api">Working with the ArchivesSpace API</a>
+    <blockquote>
+      <p>Additional documentation is needed for these sections - please consider contributing documentation via a pull request to this repo</p>
+    </blockquote>
+    <ul>
+      <li><a href="./api/get_requests.md">GET requests (retrieving records)</a></li>
+      <li><a href="./api/post_requests./md">POST requests (creating and updating records)</a></li>
+      <li><a href="./api/delete_requests">DELETE requests</a></li>
+      <li><a href="http://archivesspace.github.io/archivesspace/api/">API reference</a></li>
+    </ul>
+  </li>
+  <li><a href="./customization">Customization and configuration</a>
+    <ul>
+      <li><a href="./customization/configuration.md">Configuring ArchivesSpace</a></li>
+      <li><a href="./customization/authentication.md">Adding support for additional username/password-based authentication backends</a></li>
+      <li><a href="./customization/ldap.md">Configuring LDAP authentication</a></li>
+      <li><a href="./customization/plugins.md">ArchivesSpace Plug-ins</a></li>
+      <li><a href="./customization/locales.md">Customizing text in ArchivesSpace</a></li>
+      <li><a href="./customization/theming.md">Theming ArchivesSpace</a></li>
+      <li><a href="./customization/bower.md">Managing frontend assets with Bower</a></li>
+    </ul>
+  </li>
+  <li><a href="./provisioning">Provisioning and server configuration</a>
+    <ul>
+      <li><a href="./provisioning/clustering.md">Running ArchivesSpace with load balancing and multiple tenants</a></li>
+      <li><a href="./provisioning/domains.md">Serving ArchivesSpace over subdomains</a></li>
+      <li><a href="./provisioning/https.md">Serving ArchivesSpace user-facing applications over HTTPS</a></li>
+      <li><a href="./provisioning/jmeter.md">JMeter Test Group Template</a></li>
+      <li><a href="./provisioning/mysql.md">Running ArchivesSpace against MySQL</a></li>
+      <li><a href="./provisioning/newrelic.md">Application monitoring with New Relic</a></li>
+      <li><a href="./provisioning/prefix.md">Running ArchivesSpace under a prefix</a></li>
+      <li><a href="./provisioning/solr.md">Running ArchivesSpace with external Solr</a></li>
+      <li><a href="./provisioning/tuning.md">Tuning ArchivesSpace</a></li>
+    </ul>
+  </li>
+  <li><a href="./development">Information for developers and code contributors</a>
+    <ul>
+      <li><a href="./development/build.md">ArchivesSpace build system</a></li>
+      <li><a href="./development/release.md">Building an ArchivesSpace release</a></li>
+      <li><a href="./development/supervisord.md">Using Supervisord for development</a></li>
+      <li><a href="./development/docker.md">Docker</a></li>
+      <li><a href="./development/release_schema_versions.md">DB versions listed by release</a></li>
+      <li><a href="./development/public_test.md">Public User Interface Test Suite</a></li>
+      <li><a href="./development/reports.md">Creating Custom Reports</a></li>
+    </ul>
+  </li>
+  <li><a href="./import_export">Importing and exporting data in ArchivesSpace</a>
+    <ul>
+      <li><a href="./import_export/ead_exporter.md">ArchivesSpace repository EAD Exporter</a></li>
+      <li><a href="./import_export/xsl_stylesheets.md">ArchivesSpace XSL stylesheets</a></li>
+    </ul>
+  </li>
+  <li><a href="./migrations">Migration tools and data mapping</a>
+    <ul>
+      <li><a href="./migrations/migrate_from_archivists_toolkit.md">Archivists’ Toolkit migration tool instructions</a></li>
+      <li><a href="./migrations/migrate_from_archon.md">Archon migration tool instructions</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Note: the yard directory was removed from this repository. For now, the documentation will be maintained in the main <a href="https://github.com/archivesspace/archivesspace">ArchivesSpace repository</a>.</p>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

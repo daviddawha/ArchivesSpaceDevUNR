@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Migrating Data from Archivists Toolkit to ArchivesSpace Using the Migration Tool - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">Migrating Data from Archivists Toolkit to ArchivesSpace Using the Migration Tool</h2>
+          
+          <p>These guidelines are for migrating data from Archivists’ Toolkit 2.0 Update 16 to all ArchivesSpace 2.1.x or 2.2.x releases using the migration tool provided by ArchivesSpace. Migrations of data from earlier versions of the Archivists’ Toolkit (AT) or other versions of ArchivesSpace are not supported by these guidelines or migration tool.</p>
+
+<blockquote>
+  <p>Note: A migration from Archivists’ Toolkit to ArchivesSpace should not be run against an active production database.</p>
+</blockquote>
+
+<h2 id="preparing-for-migration">Preparing for migration</h2>
+
+<ul>
+  <li>Make a copy of the AT instance, including the database, to be migrated and use it as the source of the migration. It is strongly recommended that you not use your AT production instance and database as the source of the migration for the simple reason of protecting the production version from any anomalies that might occur during the migration process.</li>
+  <li>Review your source database for the quality of the data. Look for invalid records, duplicate name and subject records, and duplicate controlled values. Irregular data will either be carried forward to the ArchivesSpace instance or, in some cases, block the migration process.</li>
+  <li>Select a representative sample of accession, resource, and digital object records to be examined closely when the migration is completed. Make sure to represent in the sample both the simplest and most complicated or extensive records in the overall data collection.</li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+
+<ul>
+  <li>An AT subject record will be set to type ‘topical’ if it does not have a valid AT type statement or its type is not one of the types in ArchivesSpace. Several other AT LookupList values are not present in ArchivesSpace. These LookupList values cannot be added during the AT migration process and will therefore need to be changed in AT prior to migration. For full details on enum (controlled value list) mappings see the data map. You can use the AT Lookup List tool to change values that will not map correctly, as specified by the data map.</li>
+  <li>Record audit information (created by, date created, modified by, and date modified) will not migrate from AT to ArchivesSpace. ArchivesSpace will assign new audit data to each record as it is imported into ArchivesSpace. The exception to this is that the username of the user who creates an accession record will be migrated to the accession general note field.</li>
+  <li>Implement an ArchivesSpace production version including the setting up of a MySQL database to migrate into. Instructions are included at <a href="http://archivesspace.github.io/archivesspace/user/getting-started-with-archivesspace/">Getting Started with ArchivesSpace</a> and <a href="http://archivesspace.github.io/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace against MySQL</a>.</li>
+</ul>
+
+<h2 id="preparing-for-migrating-at-data">Preparing for Migrating AT Data</h2>
+
+<ul>
+  <li>The migration process is iterative in nature. A migration report is generated at the end of each migration routine. The report indicates errors or issues occurring with the migration. (An example of an AT migration report is provided at the end of this document.) You should use this report to determine if any problems observed in the migration results are best remedied in the source data or in the migrated data in the ArchivesSpace instance. If you address the problems in the source data, then you can simply conduct the migration again.</li>
+  <li>However, once you accept the migration and address problems in the migrated data, you cannot migrate the source data again without establishing a new target ArchivesSpace instance. Migrating data to a previously migrated ArchivesSpace database may result in a great many duplicate record error messages and may cause unrecoverable damage to the ArchivesSpace database.</li>
+  <li>Please note, data migration can be a very memory and time intensive task due to the large number of records being transferred. As such, we recommend running the AT migration on a computer with at least 2GB of available memory.</li>
+  <li>Make sure your ArchivesSpace MySQL database is setup correctly, following the documentation in the ArchivesSpace README file. When creating a MySQL database, you MUST set the default character encoding for the database to be UTF8. This is particularly important if you use a MySQL client, such as Navicat, MySQL Workbench, phpMyAdmin, etc., to create the database. See <a href="http://archivesspace.github.io/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace against MySQL</a> for more details.</li>
+  <li>Increase the maximum Java heap space if you are experiencing time out events. To do so:
+    <ul>
+      <li>Stop the current ArchivesSpace instance</li>
+      <li>Open in a text editor the file “archivesspace.sh” (Linux / Mac OSX) or archivesspace.bat (Windows). The file is located in the ArchivesSpace installation directory.</li>
+      <li>Find the text string “-Xmx512m” and change it to “-Xmx1024m”.</li>
+      <li>Save the file.</li>
+      <li>Restart the ArchivesSpace instance.</li>
+      <li>Restart the AT migration process.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="running-the-migration-tool-as-an-at-plugin">Running the Migration Tool as an AT Plugin</h2>
+
+<ul>
+  <li>Make sure that the AT instance you want to migrate from is shut down. Next, download the “scriptAT.zip” file from the at-migration release github page (https://github.com/archivesspace/at-migration/releases) and copy the file into the plugins folder of the AT instance, overwriting the one that’s already there if needed.</li>
+  <li>Make sure the ArchivesSpace instance that you are migrating into is up and running.</li>
+  <li>Restart the AT instance to load the newly installed plug-in. To run the plug-in go to the “Tools” menu, then select “Script Runtime v1.0”, and finally “ArchivesSpace Data Migrator”. This will cause the plug-in window to display.</li>
+</ul>
+
+<p><img src="https://archivesspace.github.io/archivesspace/assets/images/at_migrator.jpg" alt="AT migrator" /></p>
+<ul>
+  <li>Change the default information in the Migrator UI:
+    <ul>
+      <li><strong>Threads</strong> – Used to specify the number of clients that are used to copy Resource records simultaneously. The limit on the number of clients depends on the record size and allocated memory. A number from 4 to 6 is generally a good value to use, but can be reduced if an “Out of Memory Exception” occurs.</li>
+      <li><strong>Host</strong> – The URL and port number of the ArchivesSpace backend server</li>
+      <li><strong>“Copy records when done” checkbox</strong> – Used to specify that the records should
+be copied once the repository check has completed.</li>
+      <li><strong>Password</strong> – password for the ArchivesSpace “admin” account. The default value
+of “admin” should work unless it was changed by the ArchivesSpace
+administrator.</li>
+      <li><strong>Reset Password</strong> – Each user account transferred has its password reset to this.
+Please note that users need to change their password when they first log-in
+unless LDAP is used for authentication.</li>
+      <li><strong>“Specify Type of Extent Data” Radio button</strong> – If you are using the BYU Plugin,
+select that option. Otherwise, leave as the default – Normal or Harvard Plugin.</li>
+      <li><strong>Specify Unlinked Records to NOT Copy checkboxes</strong> – If you have name or
+subject records that are not linked to accessions, resources, or digital objects,
+you can choose not to migrate those to ArchivesSpace.</li>
+      <li><strong>“Records to Publish?” checkboxes</strong> – Used to specify what types of records
+should be published after they are migrated to ArchivesSpace.</li>
+      <li><strong>Text box showing -refid_unique, -term_default</strong> – This is needed for the
+functioning of the migration tool. Please do not make changes to this area.</li>
+      <li><strong>Output Console</strong> – Display section for following the migration while it is running</li>
+      <li><strong>View Error Log</strong> – Used to view a printout of all the errors encountered during the
+migration process. This can be used while the migration process is underway as well.</li>
+    </ul>
+  </li>
+  <li>Once you have made the appropriate changes to the UI, there are three buttons to choose from to start the migration process.
+    <ul>
+      <li><strong>Copy to ArchivesSpace</strong> – This starts the migration to the ArchivesSpace instance
+you have made the appropriate changes to the UI, there are three buttons to
+indicated by the Host URL.</li>
+      <li>
+        <p><strong>Run Repository Check</strong> – The repository check searches for, and attempts to fix repository misalignment between Resources and linked Accession/Digital Object records. The fix applied entails copying the linked accession/digital object record to the repository of the resource record in the ArchivesSpace database (those record positions are not modified in the AT database).</p>
+
+        <p>As long as accession records are not linked to multiple Resource records in different repositories, the fix will be valid. Otherwise, you will receive a warning message. For such cases, the Resource and Accession record(s) will still be migrated, but without links to one another; those links will need to be re-established in ArchivesSpace.</p>
+
+        <p>This misalignment problem involves only accession and resource records and not digital object records, as accession and resource records have a many-to-many relationship. Assessments also can have a many-to-many relationship with resources, accessions, and digital objects. However, since assessments are small and quick to copy, they will simply be copied to as many repositories as needed to establish all the appropriate links.</p>
+
+        <p>If the “Copy Records When Done” checkbox is selected, the records will be migrated to the ArchivesSpace instance once the check is completed.</p>
+      </li>
+      <li><strong>Continue Previous Migration</strong> – If the migration process fails, this is used to skip to the place the failed previous migration left off. This should allow the migration process of resource records to be gracefully restarted without having to clean out the ArchivesSpace backend database and start from scratch.</li>
+    </ul>
+  </li>
+  <li>For most part, the data migration process should be automatic, with an error log being generated when completed. However, depending on the particular data, various errors may occur that would require the migration to be re-run after they have been resolved by the user. The time a migration takes to complete will depend on a number of factors (database size, network performance etc.), but can be anywhere from a couple of hours to a few days.</li>
+  <li>Data from the following AT modules will migrate:
+    <ul>
+      <li>Lookup Lists</li>
+      <li>Repositories</li>
+      <li>Locations</li>
+      <li>Users</li>
+      <li>Subjects</li>
+      <li>Names</li>
+      <li>Accessions</li>
+      <li>Digital Object and Digital Object Components</li>
+      <li>Resources and Resource Components</li>
+      <li>Assessments</li>
+    </ul>
+  </li>
+  <li>Data
+    <ul>
+      <li>Reports from the following AT modules will not migrate
+        <blockquote>
+          <p>INFORMATION MISSING FROM SOURCE DOCUMENT - NEEDS REVIEW!!!</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="assessing-the-migration-and-cleaning-up-data">Assessing the Migration and Cleaning Up Data</h2>
+
+<p>Use the migration report to assess the fidelity of the migration and to determine whether to:</p>
+<ul>
+  <li>Fix data in the source AT instance and conduct the migration again, or</li>
+  <li>Fix data in the target ArchivesSpace instance.</li>
+</ul>
+
+<p>If you select to fix the data in AT and conduct the migration again, you will need to delete all the content in the ArchivesSpace instance.</p>
+
+<p>If you accept the migration in the ArchivesSpace instance, the following outlines how to check and fix your data.</p>
+
+<ul>
+  <li>Re-establish user passwords. While user records will migrate, the passwords associated with them will not. You will need to re-assign those passwords according to the policies or conventions of your repositories.</li>
+  <li>Review closely the set of sample records you selected:
+    <ul>
+      <li>Accessions</li>
+      <li>Resources</li>
+      <li>Digital objects</li>
+    </ul>
+  </li>
+  <li>Review the following groups of records, making sure the correct number of records migrated:
+    <ul>
+      <li>Accessions</li>
+      <li>Assessments</li>
+      <li>Resources</li>
+      <li>Digital objects</li>
+      <li>Controlled vocabulary lists</li>
+      <li>Subjects</li>
+      <li>Agents (Name records in AT)</li>
+      <li>Locations</li>
+      <li>Collection Management Classifications</li>
+      <li>There may be a few extra agent records due to ArchivesSpace defaults or extra assessments if they were linked to records from more than one repository.</li>
+    </ul>
+  </li>
+  <li>In conducting the reviews, look for duplicate or incomplete records, broken links, or truncated data.</li>
+  <li>Take special care to check to make sure your container data and locations are correct. The model for this is significantly different between AT and ArchivesSpace (where locations are tied to a container rather than directly to a resource or accession), so this presents some challenges for migration.</li>
+  <li>Merge enumeration values as necessary. For instance, if you had both ‘local’ and ‘local sources’ as a source for names, it might be a good idea to merge these values.</li>
+</ul>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

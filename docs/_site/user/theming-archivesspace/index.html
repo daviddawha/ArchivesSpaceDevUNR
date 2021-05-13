@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theming ArchivesSpace - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">Theming ArchivesSpace</h2>
+          
+          <h2 id="making-small-changes">Making small changes</h2>
+
+<p>It’s easiest to use a plugin for small changes to your site’s theme. With a plugin,
+we can override default views, controllers, models, etc. without having to do a
+complete rebuild of the source code.</p>
+
+<p>Let’s say we wanted to change the branding logo on the public
+interface. That can be easily changed in your <code class="highlighter-rouge">config.rb</code> file:</p>
+
+<p><code class="highlighter-rouge">AppConfig[:pui_branding_img]</code></p>
+
+<p>That setting is used by the file found in <code class="highlighter-rouge">public/app/views/shared/_header.html.erb</code> to display your PUI side logo. You don’t need to change that file, only the setting in your <code class="highlighter-rouge">config.rb</code> file.</p>
+
+<p>You can store the image in <code class="highlighter-rouge">plugins/local/public/assets/images/logo.png</code> You’ll most likely need to create one or more of the directories.</p>
+
+<p>Your <code class="highlighter-rouge">AppConfig[:pui_branding_img]</code> setting should look something like this:</p>
+
+<p><code class="highlighter-rouge">AppConfig[:pui_branding_img] = '/assets/images/logo.png'</code></p>
+
+<p>The Staff Side logo will need a small plugin file and cannot be set in your <code class="highlighter-rouge">config.rb</code> file. This needs to be changed in the <code class="highlighter-rouge">plugins/local/frontend/views/site/_branding.html.erb</code> file. You’ll most likely need to create one or more of the directories. Then create that <code class="highlighter-rouge">_branding.html.erb</code> file and paste in the following code:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="container-fluid navbar-branding"&gt;
+  &lt;%= image_tag "archivesspace/archivesspace.small.png", :class=&gt;"img-responsive" %&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>Change the <code class="highlighter-rouge">"archivesspace/archivesspace.small.png"</code> to the path to your image <code class="highlighter-rouge">/assets/images/logo.png</code> and place your login the the <code class="highlighter-rouge">plugins/local/frontend/assets/images/</code> directory. You’ll most likely need to create one or more of the directories.</p>
+
+<p><strong>Note:</strong> Since anything we add to plugins directory will not be precompiled by
+the Rails asset pipeline, we cannot use some of the tag helpers
+(like img_tag ), since that’s assuming the asset is being managed by the
+asset pipeline.</p>
+
+<p>Restart the application and you should see your logo in the default view.</p>
+
+<h2 id="adding-css-rules">Adding CSS rules</h2>
+
+<p>You can customize CSS through the plugin system too. If you don’t want to create
+a whole new plugin, the easiest way is to modify the ‘local’ plugin that ships
+with ArchivesSpace (it’s intended for these kind of site-specific changes). As
+long as you’ve still got ‘local’ listed in your AppConfig[:plugins] list, your
+changes will get picked up.</p>
+
+<p>To do that, create a file called
+<code class="highlighter-rouge">archivesspace/plugins/local/frontend/views/layout_head.html.erb</code> for the staff
+side or <code class="highlighter-rouge">archivesspace/plugins/local/public/views/layout_head.html.erb</code> for the
+public. Then you can add the line to include the CSS in the site:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;%= stylesheet_link_tag "#{@base_url}/assets/custom.css" %&gt;
+</code></pre></div></div>
+
+<p>Then place your CSS in the file:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> staff side:
+ archivesspace/plugins/local/frontend/assets/custom.css
+ or public side:
+ archivesspace/plugins/local/public/assets/custom.css
+</code></pre></div></div>
+
+<p>and it will get loaded on each page.</p>
+
+<p>You may also want to make changes to the main index page, or the header and
+footer. Those overrides would go into the following places for the public side
+of your site:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>archivesspace/plugins/local/public/views/welcome/show.html.erb
+archivesspace/plugins/local/public/views/shared/\_header.html.erb
+archivesspace/plugins/local/public/views/shared/\_footer.html.erb
+</code></pre></div></div>
+
+<h2 id="heavy-re-theming">Heavy re-theming</h2>
+
+<p>If you’re wanting to really trick out your site, you could do this in a plugin
+using the override methods show above, although there are some big disadvantages
+to this. The first is that assets will not be compiled by the Rails asset
+pipeline. Another is that you won’t be able to take advantage of the variables
+and mixins that Bootstrap and Less provide as a framework, which really helps
+keep your assets well organized.</p>
+
+<p>A better way to do this is to pull down a copy of the ArchivesSpace code and
+build out a new theme. A good resource on how to do this is
+<a href="https://www.youtube.com/watch?v=Uny736mZVnk">this video</a> .
+This video covers the staff frontend UI, but the same steps can be applied to
+the public UI as well.</p>
+
+<p>Also become a little familiar with the
+<a href="http://archivesspace.github.io/archivesspace/user/archivesspace-build-system/">build system instructions </a></p>
+
+<p>First, pull down a new copy of ArchivesSpace using git and be sure to checkout
+a tag matching the version you’re using or wanting to use.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/archivesspace/archivesspace.git
+ $ git checkout v2.5.2
+</code></pre></div></div>
+
+<p>You can start your application development server by executing:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     $ ./build/run bootstrap
+     $ ./build/run backend:devserver
+     $ ./build/run frontend:devserver
+     $ ./build/run public:devserver
+</code></pre></div></div>
+
+<p><strong>Note:</strong> You don’t have to run all these commands all the time. The bootstrap
+command really only has to be run the first time your pull down the code –
+it will also take awhile.  You also don’t have to start the frontend or public
+if you’re not working on those interfaces. Backend does have to be started for
+either the public or frontend interfaces to work. )</p>
+
+<p>Follow the instructions in the video to create a new theme. A good way is to copy the existing default theme to a new folder and start making your updates. Be sure to take advantage of the existing variables set in the Less files to make your assets nice and organized.</p>
+
+<p>Once you’ve updated you theme and have got it working, you can package your application. You can use the ./scripts/build_release to build a totally fresh AS distribution, but you don’t need to do that if you’ve simply made some minor changes to the UI. Instead, use the “./build/run public:war “ to compile your assets and package a war file. You can then take this public.war file and replace your ASpace distribution war file.</p>
+
+<p>Be sure to update your theme setting in the config.rb file and restart ASpace.</p>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

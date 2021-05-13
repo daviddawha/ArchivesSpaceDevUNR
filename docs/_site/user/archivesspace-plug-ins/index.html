@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArchivesSpace Plug-ins - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">ArchivesSpace Plug-ins</h2>
+          
+          <p>Plug-ins are a powerful feature, designed to allow you to change
+most aspects of how the application behaves.</p>
+
+<p>Plug-ins provide a mechanism to customize ArchivesSpace by overriding or extending functions
+without changing the core codebase. As they are self-contained, they also permit the ready
+sharing of packages of customization between ArchivesSpace instances.</p>
+
+<p>The ArchivesSpace distribution comes with the <code class="highlighter-rouge">hello_world</code> exemplar plug-in. Please refer to its <a href="https://github.com/archivesspace/archivesspace/blob/master/plugins/hello_world/README.md">README file</a> for a detailed description of how it is constructed and implemented.</p>
+
+<h2 id="enabling-plugins">Enabling plugins</h2>
+
+<p>Plug-ins are enabled by placing them in the <code class="highlighter-rouge">plugins</code> directory, and referencing them in the
+ArchivesSpace configuration, <code class="highlighter-rouge">common/config/config.rb</code>. For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AppConfig[:plugins] = ['local', 'hello_world', 'my_plugin']
+</code></pre></div></div>
+
+<p>This configuration assumes the following directories exist:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins
+  hello_world
+  local
+  my_plugin
+</code></pre></div></div>
+
+<p>Note that the order that the plug-ins are listed in the <code class="highlighter-rouge">:plugins</code> configuration option
+determines the order in which they are loaded by the application.</p>
+
+<h2 id="plugin-structure">Plugin structure</h2>
+
+<p>The directory structure within a plug-in is similar to the structure of the core application.
+The following shows the supported plug-in structure. Files contained in these directories can
+be used to override or extend the behavior of the core application.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">backend</span>
+  <span class="n">controllers</span> <span class="p">.........</span> <span class="n">backend</span> <span class="n">endpoints</span>
+  <span class="k">model</span> <span class="p">...............</span> <span class="n">database</span> <span class="n">mapping</span> <span class="n">models</span>
+  <span class="n">converters</span> <span class="p">..........</span> <span class="n">classes</span> <span class="n">for</span> <span class="n">importing</span> <span class="n">data</span>
+  <span class="n">job_runners</span> <span class="p">.........</span> <span class="n">classes</span> <span class="n">for</span> <span class="n">defining</span> <span class="n">background</span> <span class="n">jobs</span>
+  <span class="n">plugin_init</span><span class="p">.</span><span class="n">rb</span> <span class="p">......</span> <span class="k">if</span> <span class="n">present</span><span class="p">,</span> <span class="n">loaded</span> <span class="n">when</span> <span class="n">the</span> <span class="n">backend</span> <span class="n">first</span> <span class="n">starts</span>
+<span class="n">frontend</span>
+  <span class="n">assets</span> <span class="p">..............</span> <span class="n">static</span> <span class="n">assets</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="n">images</span><span class="p">,</span> <span class="n">javascript</span><span class="p">)</span> <span class="k">in</span> <span class="n">the</span> <span class="n">staff</span> <span class="n">interface</span>
+  <span class="n">controllers</span> <span class="p">.........</span> <span class="n">controllers</span> <span class="n">for</span> <span class="n">the</span> <span class="n">staff</span> <span class="n">interface</span>
+  <span class="n">locales</span> <span class="p">.............</span> <span class="n">locale</span> <span class="n">translations</span> <span class="n">for</span> <span class="n">the</span> <span class="n">staff</span> <span class="n">interface</span>
+  <span class="n">views</span> <span class="p">...............</span> <span class="n">templates</span> <span class="n">for</span> <span class="n">the</span> <span class="n">staff</span> <span class="n">interface</span>
+  <span class="n">plugin_init</span><span class="p">.</span><span class="n">rb</span> <span class="p">......</span> <span class="k">if</span> <span class="n">present</span><span class="p">,</span> <span class="n">loaded</span> <span class="n">when</span> <span class="n">the</span> <span class="n">staff</span> <span class="n">interface</span> <span class="n">first</span> <span class="n">starts</span>
+<span class="k">public</span>
+  <span class="n">assets</span> <span class="p">..............</span> <span class="n">static</span> <span class="n">assets</span> <span class="p">(</span><span class="n">such</span> <span class="k">as</span> <span class="n">images</span><span class="p">,</span> <span class="n">javascript</span><span class="p">)</span> <span class="k">in</span> <span class="n">the</span> <span class="k">public</span> <span class="n">interface</span>
+  <span class="n">controllers</span> <span class="p">.........</span> <span class="n">controllers</span> <span class="n">for</span> <span class="n">the</span> <span class="k">public</span> <span class="n">interface</span>
+  <span class="n">locales</span> <span class="p">.............</span> <span class="n">locale</span> <span class="n">translations</span> <span class="n">for</span> <span class="n">the</span> <span class="k">public</span> <span class="n">interface</span>
+  <span class="n">views</span> <span class="p">...............</span> <span class="n">templates</span> <span class="n">for</span> <span class="n">the</span> <span class="k">public</span> <span class="n">interface</span>
+  <span class="n">plugin_init</span><span class="p">.</span><span class="n">rb</span> <span class="p">......</span> <span class="k">if</span> <span class="n">present</span><span class="p">,</span> <span class="n">loaded</span> <span class="n">when</span> <span class="n">the</span> <span class="k">public</span> <span class="n">interface</span> <span class="n">first</span> <span class="n">starts</span>
+<span class="n">migrations</span> <span class="p">............</span> <span class="n">database</span> <span class="n">migrations</span>
+<span class="n">schemas</span> <span class="p">...............</span> <span class="n">JSONModel</span> <span class="n">schema</span> <span class="n">definitions</span>
+<span class="n">search_definitions</span><span class="p">.</span><span class="n">rb</span> <span class="p">.</span> <span class="n">Advanced</span> <span class="n">search</span> <span class="n">fields</span>
+</code></pre></div></div>
+
+<p><strong>Note</strong> that, in order to override or extend the behavior of core models and controllers, you cannot simply put your replacement with the same name in the corresponding directory path.</p>
+
+<h2 id="overriding-behavior">Overriding behavior</h2>
+
+<p>A general rule is: to override behavior, rather then extend it, match the path
+to the file that contains the behavior to be overridden.</p>
+
+<p>It is not necessary for a plug-in to have all of these directories. For example, to override
+some part of a locale file for the staff interface, you can just add the following structure
+to the local plug-in:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins/local/frontend/locales/en.yml
+</code></pre></div></div>
+
+<p>More detailed information about overriding locale files is found in <a href="https://archivesspace.github.io/archivesspace/user/customizing-text-in-archivesspace/">Customizing text in ArchivesSpace</a></p>
+
+<h2 id="overriding-the-visual-web-presentation">Overriding the visual (web) presentation</h2>
+
+<p>You can directly override any view file in the core application by placing an erb file of the same name in the analogous path.
+For example, if you want to override the appearance of the “Welcome” [home] page of the Public User Interface, you can make your changes to a file <code class="highlighter-rouge">show.html.erb</code> and place it at <code class="highlighter-rouge">plugins/my_fine_plugin/public/views/welcome/show.html.erb</code>. (Where <em>my_fine_plugin</em> is the name of your plugin)</p>
+
+<h3 id="implementing-a-broadly-applied-style-or-javascript-change">Implementing a broadly-applied style or javascript change</h3>
+
+<p>Unless you want to write inline style or javascript (which may be practiceable for a template or two), best practice is to create <code class="highlighter-rouge">plugins/my_fine_plugin/public/views/layout_head.html.erb</code> or <code class="highlighter-rouge">plugins/my_fine_plugin/frontend/views/layout_head.html.erb</code>, which contains the HTML statements to incorporate your javascript or css into the <code class="highlighter-rouge">&lt;HEAD&gt;</code> element of the template.  Here’s an example:</p>
+
+<ul>
+  <li>For the public interface, I want to change the size of the text in all links when the user is hovering.
+    <ul>
+      <li>I create <code class="highlighter-rouge">plugins/my_fine_plugin/public/assets/my.css</code>:
+        <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span><span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>I create <code class="highlighter-rouge">plugins/my_fine_plugin/public/views/layout_head.html.erb</code>, and insert:
+        <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="sx">%= stylesheet_link_tag "#{@base_url}/assets/my.css", media: :all %&gt;
+</span></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>For the public interface, I want to add some javascript behavior such that, when the user hovers over a list item, astericks appear
+    <ul>
+      <li>I create <code class="highlighter-rouge">plugins/my_fine_plugin/public/assets/my.js</code>”
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+     <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">li</span><span class="dl">"</span> <span class="p">).</span><span class="nx">hover</span><span class="p">(</span>
+       <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">append</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">&lt;span&gt; ***&lt;/span&gt;</span><span class="dl">"</span> <span class="p">)</span> <span class="p">);</span>
+      <span class="p">},</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+     <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">find</span><span class="p">(</span> <span class="dl">"</span><span class="s2">span:last</span><span class="dl">"</span> <span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">);</span>
+   <span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>I add to <code class="highlighter-rouge">plugins/my_fine_plugin/public/views/layout_head.html.erb</code>:
+        <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&lt;</span><span class="sx">%= javascript_include_tag "#{@base_url}/assets/my.js" %&gt;
+</span></code></pre></div>        </div>
+        <h2 id="adding-your-own-branding">Adding your own branding</h2>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Another example, to override the branding of the staff interface, add
+your own template at:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins/local/frontend/views/site/\_branding.html.erb
+</code></pre></div></div>
+
+<p>Files such as images, stylesheets and PDFs can be made available as static resources by
+placing them in an <code class="highlighter-rouge">assets</code> directory under an enabled plug-in. For example, the following file:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins/local/frontend/assets/my_logo.png
+</code></pre></div></div>
+
+<p>Will be available via the following URL:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://your.frontend.domain.and:port/assets/my_logo.png
+</code></pre></div></div>
+
+<p>For example, to reference this logo from the custom branding file, use
+markup such as:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;div class="container branding"&gt;
+   &lt;img src="&lt;%= #{AppConfig[:frontend_proxy_prefix]} %&gt;assets/my_logo.png" alt="My logo" /&gt;
+ &lt;/div&gt;
+</code></pre></div></div>
+
+<h2 id="plugin-configuration">Plugin configuration</h2>
+
+<p>Plug-ins can optionally contain a configuration file at <code class="highlighter-rouge">plugins/[plugin-name]/config.yml</code>.
+This configuration file supports the following options:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>system_menu_controller
+  The name of a controller that will be accessible via a Plug-ins menu in the System toolbar
+repository_menu_controller
+  The name of a controller that will be accessible via a Plug-ins menu in the Repository toolbar
+parents
+  [record-type]
+    name
+    cardinality
+  ...
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">system_menu_controller</code> and <code class="highlighter-rouge">repository_menu_controller</code> specify the names of frontend controllers
+that will be accessible via the system and repository toolbars respectively. A <code class="highlighter-rouge">Plug-ins</code> dropdown
+will appear in the toolbars if any enabled plug-ins have declared these configuration options. The
+controller name follows the standard naming conventions, for example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>repository_menu_controller: hello_world
+</code></pre></div></div>
+
+<p>Points to a controller file at <code class="highlighter-rouge">plugins/hello_world/frontend/controllers/hello_world_controller.rb</code>
+which implements a controller class called <code class="highlighter-rouge">HelloWorldController</code>. When the menu item is selected
+by the user, the <code class="highlighter-rouge">index</code> action is called on the controller.</p>
+
+<p>Note that the URLs for plug-in controllers are scoped under <code class="highlighter-rouge">plugins</code>, so the URL for the above
+example is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://your.frontend.domain.and:port/plugins/hello_world
+</code></pre></div></div>
+
+<p>Also note that the translation for the plug-in’s name in the <code class="highlighter-rouge">Plug-ins</code> dropdown menu is specified
+in a locale file in the <code class="highlighter-rouge">frontend/locales</code> directory in the plug-in. For example, in the <code class="highlighter-rouge">hello_world</code>
+example there is an English locale file at:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins/hello_world/frontend/locales/en.yml
+</code></pre></div></div>
+
+<p>The translation for the plug-in name in the <code class="highlighter-rouge">Plug-ins</code> dropdown menus is specified by the key <code class="highlighter-rouge">label</code>
+under the plug-in, like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>en:
+  plugins:
+    hello_world:
+      label: Hello World
+</code></pre></div></div>
+
+<p>Note that the example locale file contains other keys that specify translations for text displayed
+as part of the plug-in’s user interface. Be sure to place your plug-in’s translations as shown, under
+<code class="highlighter-rouge">plugins.[your_plugin_name]</code> in order to avoid accidentally overriding translations for other
+interface elements. In the example above, the translation for the <code class="highlighter-rouge">label</code> key can be referenced
+directly in an erb view file as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= I18n.t("plugins.hello_world.label") %&gt;
+</code></pre></div></div>
+
+<p>Each entry under <code class="highlighter-rouge">parents</code> specifies a record type that this plug-in provides a new subrecord for.
+<code class="highlighter-rouge">[record-type]</code> is the name of the existing record type, for example <code class="highlighter-rouge">accession</code>. <code class="highlighter-rouge">name</code> is the
+name of the plug-in in its role as a subrecord of this parent, for example <code class="highlighter-rouge">hello_worlds</code>.
+<code class="highlighter-rouge">cardinality</code> specifies the cardinality of the plug-in records. Currently supported values are
+<code class="highlighter-rouge">zero-to-many</code> and <code class="highlighter-rouge">zero-to-one</code>.</p>
+
+<h2 id="changing-search-behavior">Changing search behavior</h2>
+
+<p>A plugin can add additional fields to the advanced search interface by
+including a <code class="highlighter-rouge">search_definitions.rb</code> file at the top-level of the
+plugin directory.  This file can contain definitions such as the
+following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AdvancedSearch.define_field(:name =&gt; 'payment_fund_code', :type =&gt; :enum, :visibility =&gt; [:staff], :solr_field =&gt; 'payment_fund_code_u_utext')
+AdvancedSearch.define_field(:name =&gt; 'payment_authorizers', :type =&gt; :text, :visibility =&gt; [:staff], :solr_field =&gt; 'payment_authorizers_u_utext')
+</code></pre></div></div>
+
+<p>Each field defined will appear in the advanced search interface as a
+searchable field.  The <code class="highlighter-rouge">:visibility</code> option controls whether the field
+is presented in the staff or public interface (or both), while the
+<code class="highlighter-rouge">:type</code> parameter determines what sort of search is being performed.
+Valid values are <code class="highlighter-rouge">:text:</code>, <code class="highlighter-rouge">:boolean</code>, <code class="highlighter-rouge">:date</code> and <code class="highlighter-rouge">:enum</code>.  Finally,
+the <code class="highlighter-rouge">:solr_field</code> parameter controls which field is used from the
+underlying index.</p>
+
+<h2 id="adding-custom-reports">Adding Custom Reports</h2>
+
+<p>Custom reports may be added to plug-ins by adding a new report model as a subclass of <code class="highlighter-rouge">AbstractReport</code> to <code class="highlighter-rouge">plugins/[plugin-name]/backend/model/</code>, and the translations for said model to <code class="highlighter-rouge">plugins/[plugin-name]/frontend/locales/[language].yml</code>. Look to existing reports in reports subdirectory of the ArchivesSpace base directory for examples of how to structure a report model.</p>
+
+<p>There are several limitations to adding reports to plug-ins, including that reports from plug-ins may only use the generic report template. ArchivesSpace only searches for report templates in the reports subdirectory of the ArchivesSpace base directory, not in plug-in directories. If you would like to implement a custom report with a custom template, consider adding the report to <code class="highlighter-rouge">archivesspace/reports/</code> instead of <code class="highlighter-rouge">archivesspace/plugins/[plugin-name]/backend/model/</code>.</p>
+
+<h2 id="further-information">Further information</h2>
+
+<p><strong>Be sure to test your plug-in thoroughly as it may have unanticipated impacts on your
+ArchivesSpace application.</strong></p>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Background Jobs - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">Background Jobs</h2>
+          
+          <p>ArchivesSpace provides a mechanism for long running processes to run
+asynchronously. These processes are called <code class="highlighter-rouge">Background Jobs</code>.</p>
+
+<h2 id="managing-jobs-in-the-staff-ui">Managing Jobs in the Staff UI</h2>
+
+<p>The <code class="highlighter-rouge">Create</code> menu has a <code class="highlighter-rouge">Background Job</code> option which shows a submenu of job
+types that the current user has permission to create. (See below for more
+  information about job permissions and hidden jobs.) Selecting one of these
+  options will take the user to a form to enter any parameters required for the
+  job and then to create it.</p>
+
+<p>When a job is created it is placed in the <code class="highlighter-rouge">Background Job Queue</code>. Jobs in the
+queue will be run in the order they were created. (See below for more
+  information about multiple threads and concurrent jobs.)</p>
+
+<p>The <code class="highlighter-rouge">Browse</code> menu has a <code class="highlighter-rouge">Background Jobs</code> option. This takes the user to a list
+of jobs arranged by their status. The user can then view the details of a job,
+and cancel it if they have permission.</p>
+
+<h2 id="permissions">Permissions</h2>
+
+<p>A user must have the <code class="highlighter-rouge">create_job</code> permission to create a job. By default, this
+permission is included in the <code class="highlighter-rouge">repository_basic_data_entry</code> group.</p>
+
+<p>A user must have the <code class="highlighter-rouge">cancel_job</code> permission to cancel a job. By default, this
+permission is included in the <code class="highlighter-rouge">repository_managers</code> group.</p>
+
+<p>When a JobRunner registers it can specify additional create and cancel
+permissions. (See below for more information)</p>
+
+<h2 id="types-runners-and-schemas">Types, Runners and Schemas</h2>
+
+<p>Each job has a type, and each type has a registered runner to run jobs of that
+type and JSONModel schema to define its parameters.</p>
+
+<h4 id="registered-jobrunners">Registered JobRunners</h4>
+
+<p>All jobs of a type are handled by a registered <code class="highlighter-rouge">JobRunner</code>. The job runner
+classes are located here:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  backend/app/lib/job_runners/
+</code></pre></div></div>
+
+<p>It is possible to define additional job runners from a plugin. (See below for
+  more information about plugins.)</p>
+
+<p>A job runner class must subclass <code class="highlighter-rouge">JobRunner</code>, register to run one or more job
+types, and implement a <code class="highlighter-rouge">#run</code> method for jobs that it handles.</p>
+
+<p>When a job runner registers for a job type, it can set some options:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">:hidden</code>
+    <ul>
+      <li>Defaults to <code class="highlighter-rouge">false</code></li>
+      <li>If this is set then this job type will not be shown in the list of available job types.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">:run_concurrently</code>
+    <ul>
+      <li>Defaults to <code class="highlighter-rouge">false</code></li>
+      <li>If this is set to true then more than one job of this type can run at the same time.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">:create_permissions</code>
+    <ul>
+      <li>Defaults to <code class="highlighter-rouge">[]</code></li>
+      <li>A permission or list of permissions required, in addition to <code class="highlighter-rouge">create_job</code>, to create jobs of this type.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">:cancel_permissions</code>
+    <ul>
+      <li>Defaults to <code class="highlighter-rouge">[]</code></li>
+      <li>A permission or list of permissions required, in addition to <code class="highlighter-rouge">cancel_job</code>, to cancel jobs of this type.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>For more information about defining a job runner, see the <code class="highlighter-rouge">JobRunner</code> superclass:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  backend/app/lib/job_runner.rb
+</code></pre></div></div>
+
+<h4 id="jsonmodel-schemas">JSONModel Schemas</h4>
+
+<p>A job type also requires a JSONModel schema that defines the parameters to run a
+job of the type. The schema name must be the same as the type that the runner
+registers for. For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  common/schemas/import_job.rb
+</code></pre></div></div>
+
+<p>This schema, for <code class="highlighter-rouge">JSONModel(:import_job)</code>, defines the parameters for running a
+job of type <code class="highlighter-rouge">import_job</code>.</p>
+
+<h2 id="concurrency">Concurrency</h2>
+
+<p>ArchivesSpace can be configured to run more than one background job at a time.
+By default, there will be two threads available to run background jobs.
+The configuration looks like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  AppConfig[:job_thread_count] = 2
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">BackgroundJobQueue</code> will start this number of threads at start up. Those
+threads will then poll for queued jobs and run them.</p>
+
+<p>When a job runner registers, it can set an option called <code class="highlighter-rouge">:run_concurrently</code>.
+This is <code class="highlighter-rouge">false</code> by default. When set to <code class="highlighter-rouge">false</code> a job thread will not run a job
+if there is already a job of that type running. The job will remain on the queue
+and will be run when there are no longer any jobs of its type running.</p>
+
+<p>When set to <code class="highlighter-rouge">true</code> a job will be run when it comes to the front of the queue
+regardless of whether there is a job of the same type running.</p>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>It is possible to add a new job type from a plugin. ArchivesSpace includes a
+plugin that demonstrates how to do this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  plugins/jobs_example
+</code></pre></div></div>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

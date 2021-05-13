@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adding support for additional username password-based authentication backends - ArchivesSpace</title>
+    <link rel="stylesheet" href="/archivesspace/assets/stylesheets/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script src="/archivesspace/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="/archivesspace/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+    <link rel="alternate" type="application/atom+xml" href="/blog.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <a href="http://archivesspace.org/" title="ArchivesSpace">ArchivesSpace</a>
+</h1>
+
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="https://archivesspace.atlassian.net/wiki/display/ADC/ArchivesSpace">Wiki</a></li>
+        <li><a href="http://docs.archivesspace.org">User Docs</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> -->
+    <div class="searchbox">
+      <form onsubmit='google_site_search()'>
+        <input type="text" id="google-search" class="searchbox-input" label="Search the docs searchbox" placeholder="Search the docs" />
+      </form>
+
+      <script language="Javascript" type="text/javascript">
+          function google_site_search()
+            {
+                var query = document.getElementById("google-search").value;
+                  window.open("http://google.com/search?q=" + query
+                  + "%20site:" + "http://archivesspace.github.io/archivesspace");
+                  }
+                </script>
+    </div>
+  </div>
+  <section>
+    <nav>
+      <h2>Basic administration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/getting-started-with-archivesspace/">Getting started with ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-unix-daemon/">ArchivesSpace as a Unix daemon</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-as-a-windows-service/">ArchivesSpace as a Windows Service</a></li>
+        <li><a href="/archivesspace/user/backup-and-recovery/">Backup and Recovery</a></li>
+        <li><a href="/archivesspace/user/re-creating-indexes/">Re-creating Indexes</a></li>
+        <li><a href="/archivesspace/user/resetting-passwords/">Resetting Passwords</a></li>
+        <li><a href="/archivesspace/user/upgrading-to-a-new-release-of-archivesspace/">Upgrading ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/upgrading-to-1.1.0/">Upgrading to 1.1.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.1.1/">Upgrading to 1.1.1</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-1.5.0/">Upgrading to 1.5.0</a></li>
+            <li><a href="/archivesspace/user/what-is-the-new-functionality-related-to-containers-and-container-management-in-1.5.0/">Container Management in 1.5.0</a></li>
+            <li><a href="/archivesspace/user/upgrading-to-2.1.0/">Upgrading to 2.1.0</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Architecture and components</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-architecture-and-components">Architecture Overview</a></li>
+        <li><a href="/archivesspace/user/jsonmodel----a-validated-archivesspace-record/">JSONModel -- a validated ArchivesSpace record</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-backend/">ArchivesSpace backend</a></li>
+        <li><a href="/archivesspace/user/background-jobs/">Background Jobs</a></li>
+        <li><a href="/archivesspace/user/working-with-the-archivesspace-api/">ArchivesSpace API</a></li>
+        <li><a href="/archivesspace/user/search-indexing/">Search Indexing</a></li>
+        <li><a href="/archivesspace/user/the-archivesspace-public-user-interface/">ArchivesSpace Public User Interface</a></li>
+        <li><a href="/archivesspace/user/oai-pmh-interface/">OAI-PMH Interface</a></li>
+      </ul>
+      <h2>Customization and configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/configuring-archivesspace/">Configuring ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/configuring-ldap-authentication/">Configuring LDAP Authentication</a></li>
+        <li><a href="/archivesspace/user/adding-support-for-additional-username-password-based-authentication-backends/">Other Authentication Backends</a></li>
+        <li><a href="/archivesspace/user/archivesspace-plug-ins/">ArchivesSpace Plug-ins</a></li>
+        <li><a href="/archivesspace/user/customizing-text-in-archivesspace/">Customizing Text in ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/theming-archivesspace/">Theming ArchivesSpace</a></li>
+        <li><a href="/archivesspace/user/managing-frontend-assets-with-bower/">Managing Frontend Assets with Bower</a></li>
+      </ul>
+      <h2>Provisioning and server configuration</h2>
+      <ul>
+        <li><a href="/archivesspace/user/running-archivesspace-with-load-balancing-and-multiple-tenants/">Load Balancing and Multiple Tenants</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-over-subdomains/">ArchivesSpace with Subdomains</a></li>
+        <li><a href="/archivesspace/user/serving-archivesspace-user-facing-applications-over-https/">ArchivesSpace over HTTPS</a></li>
+        <li><a href="/archivesspace/user/jmeter-test-group-template/">JMeter Test Group Template</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-against-mysql/">Running ArchivesSpace Against MySQL</a></li>
+        <li><a href="/archivesspace/user/application-monitoring-with-new-relic/">Application Monitoring with New Relic</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-under-a-prefix/">ArchivesSpace under a Prefix</a></li>
+        <li><a href="/archivesspace/user/running-archivesspace-with-external-solr/">ArchivesSpace with External Solr</a></li>
+        <li><a href="/archivesspace/user/tuning-archivesspace/">Tuning ArchivesSpace</a></li>
+      </ul>
+      <h2>Information for developers and code contributors</h2>
+      <ul>
+        <li><a href="/archivesspace/user/archivesspace-build-system/">ArchivesSpace Build System</a></li>
+        <li><a href="/archivesspace/user/building-an-archivesspace-release/">Building an ArchivesSpace Release</a></li>
+        <li><a href="/archivesspace/user/public-test-suite/">Public Test Suite</a></li>
+        <li><a href="/archivesspace/user/selenium-test-suite/">Selenium Test Suite</a></li>
+        <li><a href="/archivesspace/user/using-supervisord-for-development/">Using supervisord for Development</a></li>
+        <li><a href="/archivesspace/user/docker/">Docker</a></li>
+        <li><a href="/archivesspace/user/reports/">Reports</a></li>
+        <li><a href="https://archivesspace.atlassian.net/wiki/spaces/ADC/pages/16449553/Contributing">Contributing to ArchivesSpace</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/contributor-license-agreements/">Contributor License Agreements</a></li>
+          </ul>
+        </li>
+        <li><a href="/archivesspace/api">The API</a></li>
+        <li><a href="/archivesspace/doc">Ruby YARD Documentation</a></li>
+        <li><div class="status-circle status">Status:</div>
+          <a href="https://travis-ci.org/archivesspace/archivesspace">Travis CI Status</a>
+        </li>
+      </ul>
+      <h2>Importing and exporting data in ArchivesSpace</h2>
+      <ul>
+        <li><a href="/archivesspace/user/accession-csv-import-template/">Accession CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/assessment-csv-import-template/">Assessment CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/digital-object-csv-import-template/">Digital Object CSV Import Template</a></li>
+        <li><a href="/archivesspace/user/archivesspace-repository-ead-exporter/">ArchivesSpace Repository EAD Exporter</a></li>
+        <li><a href="/archivesspace/user/archivesspace-xsl-stylesheets/">ArchivesSpace XSL Stylesheets</a></li>
+      </ul>
+      <h2>Migration tools and data mapping</h2>
+      <ul>
+        <li><a href="/archivesspace/user/migration-tools-and-data-mapping/">Migration Tools and Data Mapping</a>
+          <ul style="margin-left: 10px;">
+            <li><a href="/archivesspace/user/migrating-data-from-archivists-toolkit-to-archivesspace-using-the-migration-tool/">Archivists' Toolkit Migration Instructions</a></li>
+            <li><a href="/archivesspace/user/migrating-data-from-archon-to-archivesspace-using-the-migration-tool/">Archon Migration Instructions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="https://twitter.com/archivesspace">Twitter</a></li>
+      <li><a href="http://github.com/archivesspace/archivesspace">GitHub</a></li>
+      <li><a href="mailto:ArchivesSpaceHome@lyrasis.org">Email</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contributing to this Documentation</h2>
+    <p>The documentation files for this site are managed in the <a href="https://github.com/archivesspace/tech-docs">ArchivesSpace Technical Documentation Repository</a>.</p>
+      <p>This documentation was based on the <a href="https://travis-ci.org">Travis CI</a> documentation. It uses <a href="https://github.com/jekyll/jekyll">Jekyll</a> and <a href="https://github.com/tripit/slate">Slate</a></p>
+  </section>
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main">
+          
+            <h1 class="title">Adding support for additional username password-based authentication backends</h2>
+          
+          <p>ArchivesSpace supports LDAP-based authentication out of the box, but you can
+authenticate against other password-based user directories by defining your own
+authentication handler, creating a plug-in, and configuring your ArchivesSpace
+instance to use it.  If you would rather not have to create your own handler,
+there is a plug-in available that uses OAUTH user authentication that you can add
+to your ArchivesSpace installation: https://github.com/lyrasis/aspace-oauth.</p>
+
+<h2 id="creating-a-new-authentication-handler-class-to-use-in-a-plug-in">Creating a new authentication handler class to use in a plug-in</h2>
+
+<p>An authentication handler is just a class that implements a couple of
+key methods:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">initialize(opts)</code> – An object constructor which receives the
+configuration block specified in the system’s configuration.</li>
+  <li><code class="highlighter-rouge">name</code> – A zero-argument method which just returns a string that
+identifies the instance of your handler.  The format of this
+string isn’t important: it just gets stored as a user attribute
+(in the ArchivesSpace database) to make it possible to tell which
+authentication source a user last successfully authenticated
+against.</li>
+  <li><code class="highlighter-rouge">authenticate(username, password)</code> – a method which checks
+whether <code class="highlighter-rouge">password</code> is the correct password for <code class="highlighter-rouge">username</code>.  If the
+password is correct, returns an instance of <code class="highlighter-rouge">JSONModel(:user)</code>.
+Otherwise, returns <code class="highlighter-rouge">nil</code>.</li>
+</ul>
+
+<p>A new instance of your handler will be created for each login attempt,
+so there’s no need to handle concurrency in your implementation.</p>
+
+<p>Your <code class="highlighter-rouge">authenticate</code> method can do whatever is required to check that
+the provided password is correct, with the only constraint being that
+it must return either <code class="highlighter-rouge">nil</code> or a <code class="highlighter-rouge">JSONModel(:user)</code> instance.</p>
+
+<p>The <code class="highlighter-rouge">JSONModel(:user)</code> class (whose JSON schema is defined in
+<code class="highlighter-rouge">common/schemas/user.rb</code>) defines the set of properties that the
+system needs for a user.  When you return a <code class="highlighter-rouge">JSONModel(:user)</code> object,
+its values will be used to create an ArchivesSpace user (if a user by
+that name didn’t exist already), or update the existing user (if they
+were already known).</p>
+
+<p><strong>Note</strong>: <code class="highlighter-rouge">The JSONModel(:user)</code> class validates the values you give it
+against its JSON schema and throws an <code class="highlighter-rouge">JSONModel::ValidationException</code>
+if anything isn’t right.  If this happens within your handler, the
+exception will be logged and the authentication request will fail.</p>
+
+<h3 id="a-skeleton-implementation">A skeleton implementation</h3>
+
+<p>Suppose you already have a database with a table containing users that
+should be able to log in to ArchivesSpace.  Below is a sketch of an
+authentication handler that will connect to this database and use it
+for authentication.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # For this example we'll use the Sequel database toolkit.  Note that
+  # this isn't necessary--you could use whatever database library you
+  # like here.
+  require 'sequel'
+
+  class MyDatabaseAuth
+
+    # For easy access to the JSONModel(:user) class
+    include JSONModel
+
+
+    def initialize(definition)
+      # Store the database connection details for use at
+      # authentication time.
+      @db_url = definition[:db_url] or raise "Need a value for :db_url"
+    end
+
+
+    # Just for informational purposes.  Return a string containing our
+    # database URL.
+    def name
+      "MyDatabaseAuth - #{@db_url}"
+    end
+
+
+    def authenticate(username, password)
+      # Open a connection to the database
+      Sequel.connect(@db_url) do |db|
+
+        # Check whether we have an entry for the given username
+        # and password in our database's "users" table
+        user = db[:users].filter(:username =&gt; username,
+                                 :password =&gt; password).
+                          first
+
+        if !user
+          # The user couldn't be found, or their password was wrong.
+          # Authentication failed.
+          return nil
+        end
+
+        # Build and return a JSONModel(:user) instance from fields in the database
+        JSONModel(:user).from_hash(:username =&gt; username,
+                                   :name =&gt; user[:user_full_name])
+
+      end
+    end
+
+  end
+</code></pre></div></div>
+
+<p>In order to use your new authentication handler, you’ll need to add it to the plug-in
+architecture in ArchivesSpace and enable it. Create a new directory, called our_auth
+perhaps, in the plugins directory of your ArchivesSpace installation. Inside
+that directory create this directory hierarchy <code class="highlighter-rouge">backend/model/</code> and place the
+new class file there. Next, configure the new handler.</p>
+
+<h2 id="modifying-your-configuration">Modifying your configuration</h2>
+
+<p>To have ArchivesSpace invoke your new authentication handler, just add
+a new entry to the <code class="highlighter-rouge">:authentication_sources</code> configuration block in the
+<code class="highlighter-rouge">config/config.rb</code> file.</p>
+
+<p>A configuration for the above example might be as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppConfig[:authentication_sources] = [{
+                                         :model =&gt; 'MyDatabaseAuth',
+                                         :db_url =&gt; 'jdbc:mysql://localhost:3306/somedb?user=myuser&amp;password=mypassword',
+                                       }]
+</code></pre></div></div>
+
+<h2 id="add-the-plug-in-to-the-list-of-plug-ins-already-enabled">Add the plug-in to the list of plug-ins already enabled</h2>
+
+<p>In the <code class="highlighter-rouge">config/config.rb</code> file, find the setting of AppConfig[:plugins] and add
+a reference to the new plug-in there. For example, if you named it our_auth, the
+AppConfig[:plugins] setting may look something like this:</p>
+
+<p>AppConfig[:plugins] = [‘local’, ‘hello_world’, ‘our_auth’]</p>
+
+<p>Restart your ArchivesSpace installation and you should now see authentication
+requests hitting your new handler.</p>
+
+        </main>
+      </div><!-- /#content -->
+
+      <footer>
+  <div class="row">
+  </div>
+</footer>
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>
